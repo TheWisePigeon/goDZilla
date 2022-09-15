@@ -16,7 +16,7 @@ func server() {
 	})
 
 	r.GET("/tree", func (c *gin.Context)  {
-		cmd := exec.Command("tree")
+		cmd := exec.Command("ls")
 		output, err := cmd.Output()
 		if err != nil{
 			fmt.Println(err.Error())
